@@ -1,7 +1,5 @@
 <?php
-require_once 'include/dbh.inc.php';
-require_once 'include/user.inc.php';
-require_once 'include/viewUser.inc.php';
+include "include/dbh.inc.php";
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +11,9 @@ require_once 'include/viewUser.inc.php';
 
 <?php
 
-    $users = new ViewUser();
-    $users->showAllUsers();
+    $object = new Dbh;
+    $object->connect();
+
 ?>
 
 </body>
