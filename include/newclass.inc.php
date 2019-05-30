@@ -2,38 +2,39 @@
 
 require_once 'parentclass.inc.php';
 
-class A extends High
+class A
 {
+
+    public $error = "This is " . __CLASS__;
 
     public function __construct()
     {
-        echo "alfa";
+        echo "construct";
+    }
+
+    public function __toString()
+    {
+        echo "toString method: ";
+        return $this->error;
+    }
+
+    public function modulo($a, $b)
+    {
+        return $a % $b;
+    }
+
+    public function divide($a, $b)
+    {
+        return ($a / $b);
     }
 
     public function __destruct()
     {
-        echo "omega";
+        echo "destruct";
     }
-
-    public $aa = 0;
-
-    public function getAa()
-    {
-        return $this->aa;
-    }
-
-    public function changeAa($newAa, $newBb)
-    {
-        return $this->aa = $newAa+$newBb;
-    }
-
 
 }
 
-class B extends A
-{
-
-}
 
 
 

@@ -1,6 +1,6 @@
 <?php
 require_once 'include/newclass.inc.php';
-$object = new B;
+
 ?>
 
 <!DOCTYPE html>
@@ -13,10 +13,12 @@ $object = new B;
 <body>
 
     <?php
+    $object = new A;
+    echo $object . "<br>";
+    echo $object->modulo(1823981238, 131)."<br>";
+    echo $object->divide(1823981238, 131);
 
-    //echo $object->getAa();
-    echo $object->greeting;
-    //echo $object->changeAa(5, 1)
+
 
     ?>
 
