@@ -1,17 +1,58 @@
 <?php
 
-class A
+require_once 'parentclass.inc.php';
+
+class A extends High
 {
-    protected $nic = "ss";
+
+    public function __construct()
+    {
+        echo "alfa";
+    }
+
+    public function __destruct()
+    {
+        echo "omega";
+    }
+
+    public $aa = 0;
+
+    public function getAa()
+    {
+        return $this->aa;
+    }
+
+    public function changeAa($newAa, $newBb)
+    {
+        return $this->aa = $newAa+$newBb;
+    }
+
+
 }
 
-class Low extends A
+class B extends A
 {
-    //property
-    //method
-    public function low()
-    {
-        return $this->nic;
-    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

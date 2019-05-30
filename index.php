@@ -1,7 +1,6 @@
 <?php
-include 'include/newclass.inc.php';
-include 'include/parentclass.inc.php';
-$object = new Low;
+require_once 'include/newclass.inc.php';
+$object = new B;
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +14,9 @@ $object = new Low;
 
     <?php
 
-    echo $object->low();
+    //echo $object->getAa();
+    echo $object->greeting;
+    //echo $object->changeAa(5, 1)
 
     ?>
 
