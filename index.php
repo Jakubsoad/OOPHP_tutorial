@@ -4,7 +4,7 @@ require_once 'include/newclass.inc.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <title>
 
@@ -12,16 +12,19 @@ require_once 'include/newclass.inc.php';
 </head>
 <body>
 
-    <?php
-    $object = new A;
-    echo $object . "<br>";
-    echo $object->modulo(1823981238, 131)."<br>";
-    echo $object->divide(1823981238, 131);
+<form action="calc.php" method="post">
+    <input type="text" name="num1"><br>
 
+    <input type="text" name="num2"><br>
 
+    <select name="calc">
+        <option value="add">Add</option>
+        <option value="sub">Subtract</option>
+        <option value="mul">Multiply</option>
+    </select><br>
 
-    ?>
-
+    <button type="submit">Calculate</button>
+</form>
 </body>
 
 </html>
